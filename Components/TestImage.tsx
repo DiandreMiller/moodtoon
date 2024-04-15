@@ -1,4 +1,4 @@
-import moodtoonLogo from './assets/moodtoon.png'
+import moodtoonLogo from '../assets/moodtoon.png'
 import { View, Image, Text } from 'react-native';
 
 const TestImage = () => {
