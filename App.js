@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import TestImage from './TestImage';
+import { StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
+import SelectAColor from './Components/SelectAColor';
+import TestImage from './Components/TestImage';
 
 export default function App() {
+  const [backgroundColor, setBackgroundColor] = useState('white'); 
+
+  const handleColorChange = (color) => {
+    setBackgroundColor(color);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Hola Como estas</Text>
+    <View style={[styles.container, { backgroundColor }]}>
+      <SelectAColor onColorChange={handleColorChange} />
       <TestImage />
       <StatusBar style="auto" />
     </View>
@@ -15,7 +23,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
     alignItems: 'center',
     justifyContent: 'center',
   },

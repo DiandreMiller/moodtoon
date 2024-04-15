@@ -9,6 +9,7 @@
     "web": "npx expo start --web"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^2.7.5",
     "@types/react": "~18.2.45",
     "expo": "~50.0.14",
     "expo-status-bar": "~1.11.1",
