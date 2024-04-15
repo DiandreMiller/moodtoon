@@ -1,0 +1,6 @@
+module Pods_moodtoons_moodtoonsTests {
+  umbrella header "Pods-moodtoons-moodtoonsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_moodtoons {
+  umbrella header "Pods-moodtoons-umbrella.h"
+
+  export *
+  module * { export * }
+}
