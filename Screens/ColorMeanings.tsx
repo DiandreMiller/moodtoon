@@ -41,11 +41,11 @@ const ColorMeanings = () => {
             {renderColorText('Blue', 'Calmness, Serenity, Trust, Stability, Intelligence.')}
             {renderColorText('Purple', 'Royalty, Luxury, Spirituality, Mystery, Ambition.')}
             {renderColorText('Pink', 'Romance, Sweetness, Nurturing, Sensitivity.')}
-            {renderColorText('Black', 'Sophistication, Elegance, Power, Mystery, Sadness (in some contexts).')}
+            {renderColorText('Black', 'Sophistication, Elegance, Power, Mystery, Sadness.')}
             {renderColorText('White', 'Purity, Innocence, Cleanliness, Simplicity, Peace.')}
             {renderColorText('Gray', 'Neutrality, Formality, Professionalism, Practicality.')}
             {renderColorText('Brown', 'Earthiness, Stability, Warmth, Reliability.')}
-            {renderColorText('Gold', 'Wealth, Success, Luxury, Prestige.')}
+            {renderColorText('Gold', 'Wealth, Success, Luxury, Prestige, Affluence.')}
             {renderColorText('Silver', 'Modernity, Sleekness, Sophistication, Innovation.')}
         </ScrollView>
     );
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     scrollView: {
         paddingHorizontal: 20,
         paddingTop: 20,
-        paddingBottom: 100, // Adjust as needed for padding at the bottom to enable scrolling
+        paddingBottom: 100, 
     },
     colorName: {
         fontSize: 20,
