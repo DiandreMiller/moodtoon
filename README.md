@@ -44,6 +44,8 @@ Once the user selects the color, the user will then select a genre of music. Mus
 <!-- Have quotes when you open the app -->
 
 <!-- Allow users to add song to favorites that will play randomly -->
+
+<!-- Maybe allow podcasts -->
 # Getting Started 
 
 ## Follow these simple steps to get started with the app.

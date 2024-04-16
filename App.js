@@ -1,9 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
 import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import SelectAColor from './Components/SelectAColor';
-import TestImage from './Components/TestImage';
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar';
+import OfficialLogo from './Components/OfficialLogo';
+
+//Screens
+import Home from './Screens/Home';
+import ColorMeanings from './Screens/ColorMeanings';
+
+
+
+const Stack = createStackNavigator();
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState('white'); 
@@ -13,12 +22,18 @@ export default function App() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor }]}>
-      <SelectAColor onColorChange={handleColorChange} />
-      <TestImage />
-      <NavBar />
-      <StatusBar style="auto" />
-    </View>
+    
+    <NavigationContainer>
+      <OfficialLogo />
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="ColorMeanings" component={ColorMeanings} />
+      </Stack.Navigator>
+      <View style={[styles.container, { backgroundColor }]}>
+        <SelectAColor onColorChange={handleColorChange} />
+        <NavBar />
+      </View>
+    </NavigationContainer>
   );
 }
 
@@ -27,5 +42,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logoContainer: {
+    position: 'absolute', 
+    top: 10, 
+    left: -20, 
+    
   },
 });
