@@ -1,15 +1,16 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
-import * as RootNavigation from './RootNavigation'
 
-
+import rainbowBorder from '../assets/rainbow-border.jpg'
 import colorPicker from '../assets/color-picker.png';
 import genreImage from '../assets/genre-image.png';
 import corazon from '../assets/corazon.png';
 import infinityColor from '../assets/infinity-color.png';
 
-import ColorMeanings from "../Screens/ColorMeanings";
+
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -29,7 +30,13 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 30,
-        height: 30
+        height: 30,
+    }, 
+    rainbowStyle: {
+        position: 'absolute',
+        width: '100%',
+        height: 1.5,
+        bottom: 75
     }
 });
 
@@ -49,7 +56,9 @@ const NavBar = () => {
     console.log('NavBar component rendered');
 
     return (
+        
         <View style={[styles.container, { backgroundColor: 'white' }]}>
+            <Image source={rainbowBorder} style={styles.rainbowStyle} />
             <TouchableOpacity style={styles.imageContainer} onPress={() => handleImageClick('colorPicker')}>
                 <Image source={colorPicker} style={styles.image} />
                 <Text style={styles.text}>Moods</Text>

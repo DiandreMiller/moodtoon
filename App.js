@@ -10,6 +10,9 @@ import OfficialLogo from './Components/OfficialLogo';
 import Home from './Screens/Home';
 import ColorMeanings from './Screens/ColorMeanings';
 
+//Components:
+// import RainbowBottomBorder from './Components/RainbowBottomBorder'
+
 
 
 const Stack = createStackNavigator();
@@ -25,6 +28,7 @@ export default function App() {
     
     <NavigationContainer>
       <OfficialLogo />
+      {/* <RainbowBottomBorder /> */}
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="ColorMeanings" component={ColorMeanings} />
