@@ -27,7 +27,6 @@ const SelectAColor: React.FC<SelectAColorProps> = ({ selectedColor, onColorChang
     const scrollViewRef = React.useRef<ScrollView>(null);
 
     const handleScroll = (event: any) => {
-        // Update scroll position
         setScrollPosition(event.nativeEvent.contentOffset.y);
     };
 
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonContainer: {
-        marginTop: 60,
+        marginTop: 100,
     },
     picker: {
         width: 200,
