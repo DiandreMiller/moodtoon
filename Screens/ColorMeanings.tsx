@@ -1,97 +1,72 @@
-import { Text, View, StyleSheet } from "react-native"
+import React from 'react';
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 
-const styles = StyleSheet.create({
-    text: {
-        color: 'white',
-    },
-    red: {
-        color: 'red',
-    },
-    orange: {
-        color: 'orange',
-    },
-    yellow: {
-        color: 'yellow',
-    },
-    green: {
-        color: 'green',
-    },
-    blue: {
-        color: 'blue',
-    },
-    purple: {
-        color: 'purple',
-    },
-    pink: {
-        color: 'pink',
-    },
-    black: {
-        color: 'black',
-    },
-    white: {
-        color: 'white',
-    },
-    gray: {
-        color: 'gray',
-    },
-    brown: {
-        color: 'brown',
-    },
-    gold: {
-        color: 'gold',
-    },
-    silver: {
-        color: 'silver',
-    },
-});
-
+const colorNames = {
+    Red: 'red',
+    Orange: 'orange',
+    Yellow: 'yellow',
+    Green: 'green',
+    Blue: 'blue',
+    Purple: 'purple',
+    Pink: 'pink',
+    Black: 'black',
+    White: 'white',
+    Gray: 'gray',
+    Brown: 'brown',
+    Gold: 'gold',
+    Silver: 'silver',
+};
 
 const ColorMeanings = () => {
 
-    
+    const renderColorText = (colorName, meanings) => {
+        const colorStyle = { backgroundColor: colorNames[colorName], width: 18, height: 18, borderRadius: 10, marginRight: 5, marginTop: -45 };
+        return (
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 50 }}>
+                <View style={colorStyle}></View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.colorName}>{colorName}:</Text>
+                    <Text style={styles.meanings}>{meanings}</Text>
+                </View>
+            </View>
+        );
+    };
+
     return (
-        <View>
-            <Text style={[styles.text, styles.red]}>
-                Red: Passion, Energy, Love, Anger, Excitement.
-            </Text>
-            <Text style={[styles.text, styles.orange]}>
-                Orange: Creativity, Enthusiasm, Warmth, Determination.
-            </Text>
-            <Text style={[styles.text, styles.yellow]}>
-                Yellow: Happiness, Optimism, Energy, Intellect, Caution.
-            </Text>
-            <Text style={[styles.text, styles.green]}>
-                Green: Nature, Growth, Harmony, Renewal, Balance.
-            </Text>
-            <Text style={[styles.text, styles.blue]}>
-                Blue: Calmness, Serenity, Trust, Stability, Intelligence.
-            </Text>
-            <Text style={[styles.text, styles.purple]}>
-                Purple: Royalty, Luxury, Spirituality, Mystery, Ambition.
-            </Text>
-            <Text style={[styles.text, styles.pink]}>
-                Pink: Romance, Sweetness, Nurturing, Sensitivity.
-            </Text>
-            <Text style={[styles.text, styles.black]}>
-                Black: Sophistication, Elegance, Power, Mystery, Sadness (in some contexts).
-            </Text>
-            <Text style={[styles.text, styles.white]}>
-                White: Purity, Innocence, Cleanliness, Simplicity, Peace.
-            </Text>
-            <Text style={[styles.text, styles.gray]}>
-                Gray: Neutrality, Formality, Professionalism, Practicality.
-            </Text>
-            <Text style={[styles.text, styles.brown]}>
-                Brown: Earthiness, Stability, Warmth, Reliability.
-            </Text>
-            <Text style={[styles.text, styles.gold]}>
-                Gold: Wealth, Success, Luxury, Prestige.
-            </Text>
-            <Text style={[styles.text, styles.silver]}>
-                Silver: Modernity, Sleekness, Sophistication, Innovation.
-            </Text>
-        </View>
-    )
+        <ScrollView contentContainerStyle={styles.scrollView}>
+            {renderColorText('Red', 'Passion, Energy, Love, Anger, Excitement.')}
+            {renderColorText('Orange', 'Creativity, Enthusiasm, Warmth, Determination.')}
+            {renderColorText('Yellow', 'Happiness, Optimism, Energy, Intellect, Caution.')}
+            {renderColorText('Green', 'Nature, Growth, Harmony, Renewal, Balance.')}
+            {renderColorText('Blue', 'Calmness, Serenity, Trust, Stability, Intelligence.')}
+            {renderColorText('Purple', 'Royalty, Luxury, Spirituality, Mystery, Ambition.')}
+            {renderColorText('Pink', 'Romance, Sweetness, Nurturing, Sensitivity.')}
+            {renderColorText('Black', 'Sophistication, Elegance, Power, Mystery, Sadness (in some contexts).')}
+            {renderColorText('White', 'Purity, Innocence, Cleanliness, Simplicity, Peace.')}
+            {renderColorText('Gray', 'Neutrality, Formality, Professionalism, Practicality.')}
+            {renderColorText('Brown', 'Earthiness, Stability, Warmth, Reliability.')}
+            {renderColorText('Gold', 'Wealth, Success, Luxury, Prestige.')}
+            {renderColorText('Silver', 'Modernity, Sleekness, Sophistication, Innovation.')}
+        </ScrollView>
+    );
 }
+
+const styles = StyleSheet.create({
+    scrollView: {
+        paddingHorizontal: 20,
+        paddingTop: 20,
+        paddingBottom: 100, // Adjust as needed for padding at the bottom to enable scrolling
+    },
+    colorName: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 5,
+        color: 'black',
+    },
+    meanings: {
+        fontSize: 18,
+        color: 'black',
+    },
+});
 
 export default ColorMeanings;
