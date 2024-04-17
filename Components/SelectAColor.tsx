@@ -8,8 +8,12 @@ interface SelectAColorProps {
 }
 
 const SelectAColor: React.FC<SelectAColorProps> = ({ selectedColor, onColorChange }) => {
+
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const [isColorPickerOpen, setColorPickerOpen] = useState<boolean>(false);
+
+    console.log('selectedColor:', selectedColor);
+    console.log('onColorChange:', onColorChange);
 
     const handleColorChange = (color: string) => {
         onColorChange(color);

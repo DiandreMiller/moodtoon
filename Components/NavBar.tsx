@@ -10,8 +10,6 @@ import infinityColor from '../assets/infinity-color.png';
 
 
 
-
-
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
@@ -50,6 +48,9 @@ const NavBar = () => {
         if (image === 'infinityColor') {
             console.log('Navigating to ColorMeanings screen');
             navigation.navigate('ColorMeanings');
+        } else if (image === 'colorPicker') {
+            console.log('Navigating to SelectAColor screen');
+            navigation.navigate('SelectAColor');
         }
     };
 
