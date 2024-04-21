@@ -5,19 +5,22 @@ import { Picker } from '@react-native-picker/picker';
 interface SelectAColorProps {
     selectedColor: string;
     onColorChange: (color: string) => void;
+    backgroundColor: string;
 }
 
-const SelectAColor: React.FC<SelectAColorProps> = ({ selectedColor, onColorChange }) => {
+const SelectAColor: React.FC<SelectAColorProps> = ({ selectedColor, onColorChange, backgroundColor }) => {
 
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const [isColorPickerOpen, setColorPickerOpen] = useState<boolean>(false);
 
     console.log('selectedColor:', selectedColor);
     console.log('onColorChange:', onColorChange);
+    console.log('backgroundColor:', backgroundColor);
 
     const handleColorChange = (color: string) => {
         onColorChange(color);
         console.log('Selected color:', color);
+        setColorPickerOpen(false);
     };
 
     useEffect(() => {
@@ -35,7 +38,7 @@ const SelectAColor: React.FC<SelectAColorProps> = ({ selectedColor, onColorChang
     };
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {backgroundColor}]}>
             <View style={styles.buttonContainer}>
                 <Button
                     title="Select A Mood"

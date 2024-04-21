@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SelectAColor from './Components/SelectAColor';
+import SelectAColor from './Screens/SelectAColor';
 import NavBar from './Components/NavBar';
 import OfficialLogo from './Components/OfficialLogo';
 
@@ -47,7 +47,7 @@ export default function App() {
           {props => (
             <SelectAColor
               {...props}
-              selectedColor={backgroundColor}
+              backgroundColor={backgroundColor} 
               onColorChange={handleColorChange}
             />
           )}
