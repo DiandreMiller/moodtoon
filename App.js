@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import {  StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SelectAColor from './Screens/SelectAColor';
@@ -29,19 +29,8 @@ export default function App() {
         <Stack.Screen name="ColorMeanings" component={ColorMeanings} />
         <Stack.Screen
           name='SelectAColor'
-          options={({ navigation }) => ({
+          options={() => ({
             headerTitle: 'Select A Color',
-            headerRight: () => (
-              <Button 
-                onPress={() => {
-                  navigation.navigate('SelectAColor', { 
-                    selectedColor: backgroundColor, 
-                    onColorChange: handleColorChange 
-                  });
-                }}
-                title='Apply'
-              />
-            )
           })}
         >
           {props => (
@@ -54,7 +43,7 @@ export default function App() {
         </Stack.Screen>
       </Stack.Navigator>
       <View style={[styles.navbarContainer, { backgroundColor }]}>
-        <NavBar />
+        <NavBar backgroundColor={backgroundColor} />
       </View>
     </NavigationContainer>
   );

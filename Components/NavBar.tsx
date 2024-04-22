@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const NavBar = () => {
+const NavBar = ({backgroundColor}) => {
     const navigation = useNavigation();
 
     console.log('navigation:', navigation);
@@ -58,7 +58,7 @@ const NavBar = () => {
 
     return (
         
-        <View style={[styles.container, { backgroundColor: 'white' }]}>
+        <View style={[styles.container, { backgroundColor }]}>
             <Image source={rainbowBorder} style={styles.rainbowStyle} />
             <TouchableOpacity style={styles.imageContainer} onPress={() => handleImageClick('colorPicker')}>
                 <Image source={colorPicker} style={styles.image} />
