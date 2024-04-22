@@ -10,8 +10,6 @@ import infinityColor from '../assets/infinity-color.png';
 
 
 
-
-
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const NavBar = () => {
+const NavBar = ({backgroundColor}) => {
     const navigation = useNavigation();
 
     console.log('navigation:', navigation);
@@ -50,6 +48,9 @@ const NavBar = () => {
         if (image === 'infinityColor') {
             console.log('Navigating to ColorMeanings screen');
             navigation.navigate('ColorMeanings');
+        } else if (image === 'colorPicker') {
+            console.log('Navigating to SelectAColor screen');
+            navigation.navigate('SelectAColor');
         }
     };
 
@@ -57,7 +58,7 @@ const NavBar = () => {
 
     return (
         
-        <View style={[styles.container, { backgroundColor: 'white' }]}>
+        <View style={[styles.container, { backgroundColor }]}>
             <Image source={rainbowBorder} style={styles.rainbowStyle} />
             <TouchableOpacity style={styles.imageContainer} onPress={() => handleImageClick('colorPicker')}>
                 <Image source={colorPicker} style={styles.image} />
