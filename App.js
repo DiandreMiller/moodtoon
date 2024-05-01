@@ -6,6 +6,8 @@ import SelectAColor from './Screens/SelectAColor';
 import NavBar from './Components/NavBar';
 import OfficialLogo from './Components/OfficialLogo';
 
+const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = process.env;
+
 //Screens
 import Home from './Screens/Home';
 import ColorMeanings from './Screens/ColorMeanings';
