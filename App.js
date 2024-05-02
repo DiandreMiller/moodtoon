@@ -6,11 +6,14 @@ import SelectAColor from './Screens/SelectAColor';
 import NavBar from './Components/NavBar';
 import OfficialLogo from './Components/OfficialLogo';
 
+
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = process.env;
 
 //Screens
 import Home from './Screens/Home';
 import ColorMeanings from './Screens/ColorMeanings';
+import SpotifyAuthenicationScreen from './Screens/SpotifyAuthenicationScreen';
+
 
 const Stack = createStackNavigator();
 
@@ -24,10 +27,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <OfficialLogo />
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='SpotifyAuthenicationScreen'>
         <Stack.Screen name="Home">
           {props => <Home {...props} backgroundColor={backgroundColor} onColorChange={handleColorChange} />}
         </Stack.Screen>
+        
+        <Stack.Screen name="SpotifyAuthenicationScreen" component={SpotifyAuthenicationScreen} />
+         
         <Stack.Screen name="ColorMeanings" component={ColorMeanings} />
         <Stack.Screen
           name='SelectAColor'
