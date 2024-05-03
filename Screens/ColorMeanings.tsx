@@ -41,9 +41,9 @@ const ColorMeanings = () => {
             {renderColorText('Blue', 'Calmness, Serenity, Trust, Stability, Intelligence.')}
             {renderColorText('Purple', 'Royalty, Luxury, Spirituality, Mystery, Ambition.')}
             {renderColorText('Pink', 'Romance, Sweetness, Nurturing, Sensitivity.')}
-            {renderColorText('Black', 'Sophistication, Elegance, Power, Mystery, Sadness.')}
+            {renderColorText('Black', 'Sophistication, Elegance, Power, Mystery.')}
             {renderColorText('White', 'Purity, Innocence, Cleanliness, Simplicity, Peace.')}
-            {renderColorText('Gray', 'Neutrality, Formality, Professionalism, Practicality.')}
+            {renderColorText('Gray', 'Sadness, Gloominess, Despondent, Regret.')}
             {renderColorText('Brown', 'Earthiness, Stability, Warmth, Reliability.')}
             {renderColorText('Gold', 'Wealth, Success, Luxury, Prestige, Affluence.')}
             {renderColorText('Silver', 'Modernity, Sleekness, Sophistication, Innovation.')}
