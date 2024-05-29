@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 const NavBar = ({backgroundColor}) => {
     const navigation = useNavigation();
 
-    console.log('navigation:', navigation);
+    // console.log('navigation:', navigation);
   
     const handleImageClick = (image) => {
         console.log(`Clicked on image: ${image}`);

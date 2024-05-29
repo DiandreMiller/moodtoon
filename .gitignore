@@ -34,3 +34,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+RAPID_API_KEY1.tsx
+
+SongLyrics.tsx
+SongLyrics2.tsx

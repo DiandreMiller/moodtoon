@@ -5,9 +5,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SelectAColor from './Screens/SelectAColor';
 import NavBar from './Components/NavBar';
 import OfficialLogo from './Components/OfficialLogo';
+// import dotenv from 'dotenv';
+
+// dotenv.config();
 
 
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = process.env;
+console.log('sp:', SPOTIFY_CLIENT_ID);
 
 //Screens
 import Home from './Screens/Home';
