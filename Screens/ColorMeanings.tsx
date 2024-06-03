@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView } from "react-native";
-import SongLyrics from '../Components/SongLyrics';
-import SongLyrics2 from '../Components/SongLyrics2';
+// import SongLyrics from '../Components/SongLyrics';
+// import SongLyrics2 from '../Components/SongLyrics2';
 
 const colorNames = {
     Red: 'red',
@@ -49,7 +49,7 @@ const ColorMeanings = () => {
             {renderColorText('Brown', 'Earthiness, Stability, Warmth, Reliability.')}
             {renderColorText('Gold', 'Wealth, Success, Luxury, Prestige, Affluence.')}
             {renderColorText('Silver', 'Modernity, Sleekness, Sophistication, Innovation.')}
-            <SongLyrics2 />
+            {/* <SongLyrics2 /> */}
         </ScrollView>
     );
 }
